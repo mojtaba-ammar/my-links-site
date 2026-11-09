@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -160,17 +161,6 @@ body {
     box-shadow: 0 0 25px rgba(56,189,248,.2);
 }
 
-.online-dot {
-    position: absolute;
-    bottom: 9px;
-    right: 8px;
-    width: 16px;
-    height: 16px;
-    background: #22c55e;
-    border: 3px solid #101d32;
-    border-radius: 50%;
-}
-
 /* Name and bio */
 
 h1 {
@@ -230,6 +220,84 @@ h1 {
     color: var(--muted);
     font-size: 11px;
     margin-top: 4px;
+}
+
+/* NEW: Skills Section */
+
+.skills-section {
+    margin: 28px 0 30px;
+    text-align: right;
+}
+
+.skills-heading {
+    text-align: center;
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    letter-spacing: .7px;
+    margin-bottom: 7px;
+}
+
+.skills-subtitle {
+    text-align: center;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.skills-note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+    margin-bottom: 19px;
+}
+
+.skill-group {
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.025);
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 12px;
+    transition: .3s ease;
+}
+
+.skill-group:hover {
+    border-color: rgba(56,189,248,.4);
+    background: rgba(56,189,248,.035);
+}
+
+.skill-group h4 {
+    color: #7dd3fc;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    direction: rtl;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: rgba(255,255,255,.035);
+    color: var(--white);
+    font-family: 'Inter', 'Cairo', sans-serif;
+    font-size: 10px;
+    direction: ltr;
+    transition: .25s ease;
+}
+
+.skill-tag:hover {
+    border-color: var(--primary);
+    color: #7dd3fc;
+    transform: translateY(-2px);
 }
 
 /* Social links */
@@ -323,6 +391,15 @@ h1 {
     .bio { font-size: 12px; }
 
     .tech { opacity: .6; }
+
+    .skill-group {
+        padding: 12px;
+    }
+
+    .skill-tag {
+        font-size: 9px;
+        padding: 6px 8px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -354,7 +431,6 @@ h1 {
         <img src="my-avatar.jpg"
              alt="Mojtaba Ammar"
              class="profile-img">
-        
     </div>
 
     <h1>مجتبى عمار</h1>
@@ -383,13 +459,105 @@ h1 {
         </p>
     </section>
 
+    <!-- NEW: TECHNICAL & PROFESSIONAL SKILLS -->
+
+    <section class="skills-section">
+
+        <div class="skills-heading">
+            TECHNICAL & PROFESSIONAL SKILLS
+        </div>
+
+        <h3 class="skills-subtitle">
+            المهارات والمعرفة
+        </h3>
+
+        <p class="skills-note">
+            Foundational Knowledge & Practical Learning
+        </p>
+
+        <!-- Technical Skills -->
+
+        <div class="skill-group">
+
+            <h4>Technical & Development Skills</h4>
+
+            <div class="skill-tags">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">Flutter</span>
+                <span class="skill-tag">Dart</span>
+                <span class="skill-tag">REST APIs</span>
+            </div>
+
+        </div>
+
+        <!-- Database & Analytics -->
+
+        <div class="skill-group">
+
+            <h4>Database & Data Analytics</h4>
+
+            <div class="skill-tags">
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Database Management</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">DAX</span>
+                <span class="skill-tag">Microsoft Excel</span>
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Data Visualization</span>
+                <span class="skill-tag">Business Intelligence</span>
+            </div>
+
+        </div>
+
+        <!-- Systems & Business -->
+
+        <div class="skill-group">
+
+            <h4>Systems Analysis & Business Skills</h4>
+
+            <div class="skill-tags">
+                <span class="skill-tag">Systems Analysis</span>
+                <span class="skill-tag">Systems Design</span>
+                <span class="skill-tag">Requirements Analysis</span>
+                <span class="skill-tag">Documentation</span>
+                <span class="skill-tag">Product Management</span>
+                <span class="skill-tag">Performance Tracking</span>
+                <span class="skill-tag">Revenue Tracking</span>
+            </div>
+
+        </div>
+
+        <!-- AI & Digital Skills -->
+
+        <div class="skill-group">
+
+            <h4>Artificial Intelligence & Digital Business</h4>
+
+            <div class="skill-tags">
+                <span class="skill-tag">AI in Business</span>
+                <span class="skill-tag">AI Tools</span>
+                <span class="skill-tag">AI-Assisted Development</span>
+                <span class="skill-tag">Digital Marketing Fundamentals</span>
+                <span class="skill-tag">Business Analytics</span>
+            </div>
+
+        </div>
+
+    </section>
+
     <div class="section-title">
         تواصل معي عبر منصاتي الرسمية
     </div>
 
     <div class="links">
 
-        <!-- استبدل الروابط بروابط حساباتك الشخصية -->
+        <!-- LinkedIn -->
 
         <a href="https://www.linkedin.com/in/mojtaba-ammar"
            target="_blank" rel="noopener noreferrer"
@@ -405,6 +573,8 @@ h1 {
             <span class="arrow">↗</span>
         </a>
 
+        <!-- GitHub -->
+
         <a href="https://github.com/mojtaba-ammar"
            target="_blank" rel="noopener noreferrer"
            class="social-link">
@@ -419,6 +589,8 @@ h1 {
             <span class="arrow">↗</span>
         </a>
 
+        <!-- Email -->
+
         <a href="mailto:mojtabaamar123@gmail.com"
            class="social-link">
 
@@ -431,6 +603,8 @@ h1 {
 
             <span class="arrow">↗</span>
         </a>
+
+        <!-- Facebook -->
 
         <a href="https://www.facebook.com/mojtaba.ammar.is"
            target="_blank" rel="noopener noreferrer"
